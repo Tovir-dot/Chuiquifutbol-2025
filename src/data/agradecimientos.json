@@ -1,0 +1,57 @@
+{
+  "institucionales": {
+    "alcaldesa": {
+      "nombre": "Graciela Lucero Hernández",
+      "cargo": "Alcaldesa de Puerres",
+      "foto": "https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&cs=tinysrgb&w=300"
+    },
+    "oficina": {
+      "nombre": "Oficina de Cultura y Deporte de Puerres",
+      "logo": "https://images.pexels.com/photos/2479312/pexels-photo-2479312.jpeg?auto=compress&cs=tinysrgb&w=200"
+    },
+    "fundacion": {
+      "nombre": "Fundación Alianza Sureña",
+      "logo": "https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=200"
+    },
+    "coordinador": {
+      "nombre": "Óscar Armando Bolaños Castro",
+      "cargo": "Coordinador Zonal CHIQUIFÚTBOL – Sur Occidente de Colombia",
+      "foto": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300"
+    },
+    "aval": {
+      "nombre": "Vigor, la fuerza de los eventos",
+      "logo": "https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=200"
+    },
+    "contacto": {
+      "whatsapp": "3183773718",
+      "icono": "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=50"
+    }
+  },
+  "gestores": [
+    {
+      "nombre": "Municipio de Puerres",
+      "apoyo": "Organización y respaldo institucional",
+      "logo": "https://images.pexels.com/photos/2479312/pexels-photo-2479312.jpeg?auto=compress&cs=tinysrgb&w=200"
+    },
+    {
+      "nombre": "Lácteos Santa María",
+      "apoyo": "Hidratación para los equipos",
+      "logo": "https://images.pexels.com/photos/248412/pexels-photo-248412.jpeg?auto=compress&cs=tinysrgb&w=200"
+    },
+    {
+      "nombre": "Vigor",
+      "apoyo": "Patrocinio y aval de calidad",
+      "logo": "https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=200"
+    },
+    {
+      "nombre": "OSBOL Sport Marketing",
+      "apoyo": "Apoyo en marketing y difusión",
+      "logo": "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=200"
+    },
+    {
+      "nombre": "Fortaleza",
+      "apoyo": "Gestión y respaldo logístico",
+      "logo": "https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=200"
+    }
+  ]
+}

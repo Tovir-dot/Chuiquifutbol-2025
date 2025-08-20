@@ -1,0 +1,112 @@
+---
+---
+
+<nav class="fixed top-0 w-full z-50 bg-neo-black border-b-4 border-neo-yellow shadow-neo-lg">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="#inicio" class="text-neo-yellow font-black text-xl md:text-2xl hover:text-neo-cyan transition-colors duration-200">
+          CHIQUIFÚTBOL 2025
+        </a>
+      </div>
+      
+      <!-- Menu Desktop -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="#equipos" class="nav-link text-neo-white hover:text-neo-lime font-bold text-sm uppercase tracking-wide transition-colors duration-200">
+          Equipos
+        </a>
+        <a href="#resultados" class="nav-link text-neo-white hover:text-neo-lime font-bold text-sm uppercase tracking-wide transition-colors duration-200">
+          Resultados
+        </a>
+        <a href="#posiciones" class="nav-link text-neo-white hover:text-neo-lime font-bold text-sm uppercase tracking-wide transition-colors duration-200">
+          Posiciones
+        </a>
+        <a href="#partidos" class="nav-link text-neo-white hover:text-neo-lime font-bold text-sm uppercase tracking-wide transition-colors duration-200">
+          Partidos
+        </a>
+        <a href="#goleadores" class="nav-link text-neo-white hover:text-neo-lime font-bold text-sm uppercase tracking-wide transition-colors duration-200">
+          Goleadores
+        </a>
+        <a href="#galeria" class="nav-link text-neo-white hover:text-neo-lime font-bold text-sm uppercase tracking-wide transition-colors duration-200">
+          Galería
+        </a>
+        <a href="#agradecimientos" class="nav-link text-neo-white hover:text-neo-lime font-bold text-sm uppercase tracking-wide transition-colors duration-200">
+          Apoyos
+        </a>
+      </div>
+      
+      <!-- Menu Mobile -->
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-neo-white hover:text-neo-yellow focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-neo-black border-t-2 border-neo-yellow">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#equipos" class="mobile-nav-link block px-3 py-2 text-neo-white hover:text-neo-lime font-bold text-sm uppercase tracking-wide">
+          Equipos
+        </a>
+        <a href="#resultados" class="mobile-nav-link block px-3 py-2 text-neo-white hover:text-neo-lime font-bold text-sm uppercase tracking-wide">
+          Resultados
+        </a>
+        <a href="#posiciones" class="mobile-nav-link block px-3 py-2 text-neo-white hover:text-neo-lime font-bold text-sm uppercase tracking-wide">
+          Posiciones
+        </a>
+        <a href="#partidos" class="mobile-nav-link block px-3 py-2 text-neo-white hover:text-neo-lime font-bold text-sm uppercase tracking-wide">
+          Partidos
+        </a>
+        <a href="#goleadores" class="mobile-nav-link block px-3 py-2 text-neo-white hover:text-neo-lime font-bold text-sm uppercase tracking-wide">
+          Goleadores
+        </a>
+        <a href="#galeria" class="mobile-nav-link block px-3 py-2 text-neo-white hover:text-neo-lime font-bold text-sm uppercase tracking-wide">
+          Galería
+        </a>
+        <a href="#agradecimientos" class="mobile-nav-link block px-3 py-2 text-neo-white hover:text-neo-lime font-bold text-sm uppercase tracking-wide">
+          Apoyos
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+  
+  // Close mobile menu when clicking nav links
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+    });
+  });
+  
+  // Smooth scroll for all nav links
+  const allNavLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+  allNavLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href')?.substring(1);
+      const targetElement = document.getElementById(targetId || '');
+      
+      if (targetElement) {
+        const offsetTop = targetElement.offsetTop - 100;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>

@@ -1,0 +1,118 @@
+---
+import galeriaData from '../data/galeria.json';
+---
+
+<div class="gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+  {galeriaData.map((foto) => (
+    <a 
+      href={foto.srcGrande}
+      data-pswp-width={foto.width}
+      data-pswp-height={foto.height}
+      target="_blank"
+      rel="noreferrer"
+      class="group block border-4 border-neo-black rounded-xl overflow-hidden shadow-neo hover:shadow-neo-xl transition-all duration-300 transform hover:-translate-y-2 bg-neo-white"
+      aria-label={`Ver imagen: ${foto.alt}`}
+    >
+      <div class="aspect-[4/3] overflow-hidden">
+        <img 
+          src={foto.thumb}
+          alt={foto.alt}
+          loading="lazy"
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+        />
+      </div>
+      <div class="p-4 bg-neo-yellow border-t-4 border-neo-black">
+        <p class="text-sm font-bold text-neo-black line-clamp-2">{foto.alt}</p>
+      </div>
+    </a>
+  ))}
+</div>
+
+<script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+  import 'photoswipe/style.css';
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '.gallery',
+    children: 'a',
+    pswpModule: () => import('photoswipe'),
+    bgOpacity: 0.9,
+    showHideAnimationType: 'zoom',
+    loop: true,
+    closeOnVerticalDrag: true,
+    padding: { top: 20, bottom: 40, left: 100, right: 100 },
+    wheelToZoom: true,
+    pinchToClose: true,
+    clickToCloseNonZoomable: true,
+  });
+
+  // Configurar eventos adicionales
+  lightbox.on('uiRegister', function() {
+    lightbox.pswp.ui.registerElement({
+      name: 'custom-caption',
+      order: 9,
+      isButton: false,
+      appendTo: 'root',
+      html: 'Caption text',
+      onInit: (el, pswp) => {
+        lightbox.pswp.on('change', () => {
+          const currSlideElement = lightbox.pswp.currSlide.data.element;
+          let captionHTML = '';
+          if (currSlideElement) {
+            const img = currSlideElement.querySelector('img');
+            if (img) {
+              captionHTML = img.getAttribute('alt') || '';
+            }
+          }
+          el.innerHTML = captionHTML || '';
+        });
+      }
+    });
+  });
+
+  lightbox.init();
+</script>
+
+<style>
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.3;
+    max-height: calc(1.3em * 2);
+  }
+
+  /* Estilos personalizados para PhotoSwipe */
+  :global(.pswp__caption) {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-weight: bold;
+    padding: 16px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 0 20px 20px;
+  }
+
+  :global(.pswp__button) {
+    background: rgba(0, 0, 0, 0.8) !important;
+    border: 2px solid #FFFF00 !important;
+    border-radius: 8px !important;
+    color: #FFFF00 !important;
+  }
+
+  :global(.pswp__button:hover) {
+    background: #FFFF00 !important;
+    color: #000000 !important;
+  }
+
+  :global(.pswp__counter) {
+    background: rgba(0, 0, 0, 0.8);
+    color: #FFFF00;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 2px solid #FFFF00;
+  }
+</style>

@@ -1,0 +1,50 @@
+[
+  {
+    "fecha": "2025-08-13",
+    "hora": "15:00",
+    "local": "Atlético Popayán",
+    "visitante": "Club RADY Ipiales",
+    "golesLocal": 3,
+    "golesVisitante": 1,
+    "amarillasLocal": 0,
+    "amarillasVisitante": 0,
+    "rojasLocal": 0,
+    "rojasVisitante": 0
+  },
+  {
+    "fecha": "2025-08-13",
+    "hora": "17:00",
+    "local": "Club Deportes Patiá",
+    "visitante": "AFD Sportas",
+    "golesLocal": 4,
+    "golesVisitante": 0,
+    "amarillasLocal": 1,
+    "amarillasVisitante": 2,
+    "rojasLocal": 0,
+    "rojasVisitante": 0
+  },
+  {
+    "fecha": "2025-08-14",
+    "hora": "09:00",
+    "local": "Deportivo Pasto",
+    "visitante": "Estudiantes F.C.",
+    "golesLocal": 2,
+    "golesVisitante": 1,
+    "amarillasLocal": 0,
+    "amarillasVisitante": 1,
+    "rojasLocal": 0,
+    "rojasVisitante": 0
+  },
+  {
+    "fecha": "2025-08-14",
+    "hora": "11:00",
+    "local": "CAR Nariño",
+    "visitante": "Academia Cali La Unión",
+    "golesLocal": 1,
+    "golesVisitante": 3,
+    "amarillasLocal": 2,
+    "amarillasVisitante": 0,
+    "rojasLocal": 1,
+    "rojasVisitante": 0
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "campeon": "Club Deportes Patiá",
+  "logocampeon": "https://images.pexels.com/photos/1618200/pexels-photo-1618200.jpeg?auto=compress&cs=tinysrgb&w=200",
+  "subcampeon": "Atlético Popayán",
+  "logosubcampeon": "https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=200",
+  "tercero": "Deportivo Pasto",
+  "logotercero": "https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=200",
+  "cuarto": "Club Río Real",
+  "logocuarto": "https://images.pexels.com/photos/2479312/pexels-photo-2479312.jpeg?auto=compress&cs=tinysrgb&w=200",
+  "valla_menos_vencida": {
+    "jugador": "Juan Pérez",
+    "equipo": "Club Deportes Patiá",
+    "goles_en_contra": 3
+  },
+  "goleadores": [
+    {
+      "jugador": "Juan Pérez",
+      "equipo": "Club Deportes Patiá",
+      "goles": 8
+    },
+    {
+      "jugador": "Carlos Gómez",
+      "equipo": "Atlético Popayán",
+      "goles": 8
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+---
+export interface Props {
+  partido: {
+    fecha: string;
+    hora: string;
+    local: string;
+    visitante: string;
+    golesLocal: number;
+    golesVisitante: number;
+    amarillasLocal: number;
+    amarillasVisitante: number;
+    rojasLocal: number;
+    rojasVisitante: number;
+  };
+}
+
+const { partido } = Astro.props;
+
+function formatDate(dateString: string) {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('es-CO', { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  });
+}
+---
+
+<div class="bg-neo-white border-4 border-neo-black rounded-2xl shadow-neo-lg p-6 hover:shadow-neo-xl transition-shadow duration-300">
+  <div class="text-center mb-4">
+    <p class="text-sm font-bold text-gray-600 uppercase tracking-wide">{formatDate(partido.fecha)}</p>
+    <p class="text-lg font-black text-neo-black">{partido.hora}</p>
+  </div>
+  
+  <div class="grid grid-cols-5 gap-4 items-center">
+    <!-- Equipo Local -->
+    <div class="col-span-2 text-right">
+      <h4 class="font-bold text-lg text-neo-black truncate" title={partido.local}>
+        {partido.local}
+      </h4>
+      <div class="flex justify-end items-center gap-1 mt-2">
+        {Array.from({ length: partido.amarillasLocal }).map(() => (
+          <div class="w-3 h-4 bg-yellow-400 border border-neo-black rounded-sm"></div>
+        ))}
+        {Array.from({ length: partido.rojasLocal }).map(() => (
+          <div class="w-3 h-4 bg-red-500 border border-neo-black rounded-sm"></div>
+        ))}
+      </div>
+    </div>
+    
+    <!-- Marcador -->
+    <div class="col-span-1 text-center">
+      <div class="bg-neo-yellow border-4 border-neo-black rounded-xl py-3 px-4 shadow-neo">
+        <span class="text-3xl font-black text-neo-black">
+          {partido.golesLocal} - {partido.golesVisitante}
+        </span>
+      </div>
+    </div>
+    
+    <!-- Equipo Visitante -->
+    <div class="col-span-2 text-left">
+      <h4 class="font-bold text-lg text-neo-black truncate" title={partido.visitante}>
+        {partido.visitante}
+      </h4>
+      <div class="flex items-center gap-1 mt-2">
+        {Array.from({ length: partido.amarillasVisitante }).map(() => (
+          <div class="w-3 h-4 bg-yellow-400 border border-neo-black rounded-sm"></div>
+        ))}
+        {Array.from({ length: partido.rojasVisitante }).map(() => (
+          <div class="w-3 h-4 bg-red-500 border border-neo-black rounded-sm"></div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>

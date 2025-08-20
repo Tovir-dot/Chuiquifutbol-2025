@@ -1,0 +1,50 @@
+[
+  { 
+    "id": 1, 
+    "nombre": "Atlético Popayán", 
+    "logo": "https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=200", 
+    "grupo": "A" 
+  },
+  { 
+    "id": 2, 
+    "nombre": "Club Deportes Patiá", 
+    "logo": "https://images.pexels.com/photos/1618200/pexels-photo-1618200.jpeg?auto=compress&cs=tinysrgb&w=200", 
+    "grupo": "A" 
+  },
+  { 
+    "id": 3, 
+    "nombre": "AFD Sportas", 
+    "logo": "https://images.pexels.com/photos/2479312/pexels-photo-2479312.jpeg?auto=compress&cs=tinysrgb&w=200", 
+    "grupo": "A" 
+  },
+  { 
+    "id": 4, 
+    "nombre": "Futplay Ipiales", 
+    "logo": "https://images.pexels.com/photos/1459903/pexels-photo-1459903.jpeg?auto=compress&cs=tinysrgb&w=200", 
+    "grupo": "A" 
+  },
+  { 
+    "id": 5, 
+    "nombre": "Deportivo Pasto", 
+    "logo": "https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=200", 
+    "grupo": "B" 
+  },
+  { 
+    "id": 6, 
+    "nombre": "Estudiantes F.C.", 
+    "logo": "https://images.pexels.com/photos/2291004/pexels-photo-2291004.jpeg?auto=compress&cs=tinysrgb&w=200", 
+    "grupo": "B" 
+  },
+  { 
+    "id": 7, 
+    "nombre": "CAR Nariño", 
+    "logo": "https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&w=200", 
+    "grupo": "B" 
+  },
+  { 
+    "id": 8, 
+    "nombre": "Academia Cali La Unión", 
+    "logo": "https://images.pexels.com/photos/2479312/pexels-photo-2479312.jpeg?auto=compress&cs=tinysrgb&w=200", 
+    "grupo": "B" 
+  }
+]

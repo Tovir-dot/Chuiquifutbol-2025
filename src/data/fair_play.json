@@ -1,0 +1,53 @@
+[
+  {
+    "equipo": "Club Deportes Patiá",
+    "jugadores": [
+      {
+        "nombre": "JUAN PÉREZ LÓPEZ",
+        "ta": 0,
+        "tr": 0,
+        "jl": 0
+      },
+      {
+        "nombre": "CARLOS GÓMEZ RUIZ",
+        "ta": 0,
+        "tr": 0,
+        "jl": 0
+      }
+    ]
+  },
+  {
+    "equipo": "Atlético Popayán",
+    "jugadores": [
+      {
+        "nombre": "ANDRÉS MARTÍNEZ",
+        "ta": 1,
+        "tr": 0,
+        "jl": -1
+      },
+      {
+        "nombre": "LUIS FERNÁNDEZ",
+        "ta": 1,
+        "tr": 0,
+        "jl": -1
+      }
+    ]
+  },
+  {
+    "equipo": "Deportivo Pasto",
+    "jugadores": [
+      {
+        "nombre": "MIGUEL TORRES",
+        "ta": 2,
+        "tr": 1,
+        "jl": -5
+      },
+      {
+        "nombre": "DAVID SÁNCHEZ",
+        "ta": 1,
+        "tr": 0,
+        "jl": -1
+      }
+    ]
+  }
+]

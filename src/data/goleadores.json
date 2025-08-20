@@ -1,0 +1,27 @@
+[
+  {
+    "jugador": "Juan Pérez",
+    "equipo": "Club Deportes Patiá",
+    "goles": 8
+  },
+  {
+    "jugador": "Carlos Gómez",
+    "equipo": "Atlético Popayán",
+    "goles": 6
+  },
+  {
+    "jugador": "Andrés Martínez",
+    "equipo": "Deportivo Pasto",
+    "goles": 5
+  },
+  {
+    "jugador": "Luis Fernández",
+    "equipo": "Academia Cali La Unión",
+    "goles": 4
+  },
+  {
+    "jugador": "Miguel Torres",
+    "equipo": "CAR Nariño",
+    "goles": 3
+  }
+]

@@ -2,7 +2,7 @@
 export interface Props {
   partido: {
     fecha: string;
-    hora: string;
+    hora?: string;
     local: string;
     visitante: string;
     golesLocal: number;
@@ -11,6 +11,9 @@ export interface Props {
     amarillasVisitante: number;
     rojasLocal: number;
     rojasVisitante: number;
+    // campos opcionales para mostrar logos/fotos si los tienes en el JSON
+    logoLocal?: string;
+    logoVisitante?: string;
   };
 }
 
@@ -27,48 +30,89 @@ function formatDate(dateString: string) {
 }
 ---
 
-<div class="bg-neo-white border-4 border-neo-black rounded-2xl shadow-neo-lg p-6 hover:shadow-neo-xl transition-shadow duration-300">
-  <div class="text-center mb-4">
-    <p class="text-sm font-bold text-gray-600 uppercase tracking-wide">{formatDate(partido.fecha)}</p>
-    <p class="text-lg font-black text-neo-black">{partido.hora}</p>
-  </div>
-  
-  <div class="grid grid-cols-5 gap-4 items-center">
-    <!-- Equipo Local -->
-    <div class="col-span-2 text-right">
-      <h4 class="font-bold text-lg text-neo-black truncate" title={partido.local}>
+<style>
+  /* pequeñas utilidades para controlar salto de línea y números tabulares */
+  .team-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.05;
+    max-height: calc(1.05em * 2);
+  }
+  .tabular-nums { font-variant-numeric: tabular-nums; }
+</style>
+
+<div class="bg-neo-white border-4 border-neo-black rounded-2xl shadow-neo-lg p-4 hover:shadow-neo-xl transition-shadow duration-300 h-full flex flex-col justify-between">
+  <!-- Fecha / Hora -->
+  <header class="text-center mb-3">
+    <p class="text-xs font-bold text-gray-600 uppercase tracking-widest">{formatDate(partido.fecha)}</p>
+    <p class="text-sm md:text-base font-extrabold text-neo-black">
+      <time datetime={partido.fecha}>
+        {partido.hora ?? new Date(partido.fecha).toLocaleTimeString('es-CO', { hour: '2-digit', minute: '2-digit' })}
+      </time>
+    </p>
+  </header>
+
+  <!-- Contenido principal: equipo - marcador - equipo -->
+  <div class="flex items-center gap-3">
+    <!-- Local -->
+    <div class="flex-1 flex flex-col items-end pr-3">
+      {partido.logoLocal ? (
+        <img src={partido.logoLocal} alt={partido.local} class="w-12 h-12 rounded-full border-2 border-neo-black object-cover mb-2" loading="lazy" width="48" height="48" />
+      ) : (
+        <div class="w-12 h-12 rounded-full border-2 border-neo-black bg-gray-100 flex items-center justify-center mb-2 font-bold text-sm">
+          {partido.local.slice(0,2).toUpperCase()}
+        </div>
+      )}
+      <h4 class="team-name font-bold text-base text-neo-black text-right" title={partido.local}>
         {partido.local}
       </h4>
+
       <div class="flex justify-end items-center gap-1 mt-2">
-        {Array.from({ length: partido.amarillasLocal }).map(() => (
-          <div class="w-3 h-4 bg-yellow-400 border border-neo-black rounded-sm"></div>
+        {Array.from({ length: partido.amarillasLocal }).map((_, i) => (
+          <div class="w-3 h-4 bg-yellow-400 border border-neo-black rounded-sm" aria-hidden="true" />
         ))}
-        {Array.from({ length: partido.rojasLocal }).map(() => (
-          <div class="w-3 h-4 bg-red-500 border border-neo-black rounded-sm"></div>
+        {Array.from({ length: partido.rojasLocal }).map((_, i) => (
+          <div class="w-3 h-4 bg-red-500 border border-neo-black rounded-sm" aria-hidden="true"></div>
         ))}
       </div>
     </div>
-    
-    <!-- Marcador -->
-    <div class="col-span-1 text-center">
-      <div class="bg-neo-yellow border-4 border-neo-black rounded-xl py-3 px-4 shadow-neo">
-        <span class="text-3xl font-black text-neo-black">
-          {partido.golesLocal} - {partido.golesVisitante}
-        </span>
+
+    <!-- Marcador central (más grande y legible) -->
+    <div class="w-20 flex-shrink-0">
+      <div class="bg-neo-yellow border-4 border-neo-black rounded-xl py-2 px-2 shadow-neo flex flex-col items-center justify-center">
+        <span class="text-2xl md:text-3xl font-black tabular-nums leading-none" aria-label={`goles local ${partido.golesLocal}`}>{partido.golesLocal}</span>
+        <span class="text-sm md:text-base font-black leading-none">—</span>
+        <span class="text-2xl md:text-3xl font-black tabular-nums leading-none" aria-label={`goles visitante ${partido.golesVisitante}`}>{partido.golesVisitante}</span>
       </div>
     </div>
-    
-    <!-- Equipo Visitante -->
-    <div class="col-span-2 text-left">
-      <h4 class="font-bold text-lg text-neo-black truncate" title={partido.visitante}>
+
+    <!-- Visitante -->
+    <div class="flex-1 flex flex-col items-start pl-3">
+      {partido.logoVisitante ? (
+        <img src={partido.logoVisitante} alt={partido.visitante} class="w-12 h-12 rounded-full border-2 border-neo-black object-cover mb-2" loading="lazy" width="48" height="48" />
+      ) : (
+        <div class="w-12 h-12 rounded-full border-2 border-neo-black bg-gray-100 flex items-center justify-center mb-2 font-bold text-sm">
+          {partido.visitante.slice(0,2).toUpperCase()}
+        </div>
+      )}
+      <h4 class="team-name font-bold text-base text-neo-black text-left" title={partido.visitante}>
         {partido.visitante}
       </h4>
+
       <div class="flex items-center gap-1 mt-2">
-        {Array.from({ length: partido.amarillasVisitante }).map(() => (
-          <div class="w-3 h-4 bg-yellow-400 border border-neo-black rounded-sm"></div>
+        {Array.from({ length: partido.amarillasVisitante }).map((_, i) => (
+          // Use a fragment and assign key to it
+          <>
+            <div class="w-3 h-4 bg-yellow-400 border border-neo-black rounded-sm" aria-hidden="true"></div>
+          </>
         ))}
-        {Array.from({ length: partido.rojasVisitante }).map(() => (
-          <div class="w-3 h-4 bg-red-500 border border-neo-black rounded-sm"></div>
+        {Array.from({ length: partido.rojasVisitante }).map((_, i) => (
+          <Fragment key={`rv-${i}`}>
+            <div class="w-3 h-4 bg-red-500 border border-neo-black rounded-sm" aria-hidden="true"></div>
+          </Fragment>
         ))}
       </div>
     </div>

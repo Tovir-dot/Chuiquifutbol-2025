@@ -462,18 +462,27 @@ import agradecimientosData from '../data/agradecimientos.json';
         </h3>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {agradecimientosData.gestores.map((gestor) => (
-            <div class="bg-neo-white border-4 border-neo-black rounded-2xl shadow-neo-lg hover:shadow-neo-xl transition-all duration-300 transform hover:-translate-y-2 p-6 text-center group">
-              <img 
-                src={gestor.logo} 
-                alt={gestor.nombre}
-                class="w-16 h-16 mx-auto mb-4 border-4 border-neo-black rounded-full object-cover group-hover:border-neo-cyan transition-colors duration-300"
-                loading="lazy"
-              />
-              <h4 class="font-bold text-sm text-neo-black mb-2 leading-tight">{gestor.nombre}</h4>
-              <p class="text-xs font-semibold text-gray-600 leading-tight">{gestor.apoyo}</p>
+            <div class="bg-neo-white border-4 border-neo-black rounded-2xl shadow-neo-lg hover:shadow-neo-xl transition-all duration-300 transform hover:-translate-y-2 p-6 text-center group flex flex-col justify-between h-full min-h-[220px]">
+              <!-- contenedor fijo para logo: mantiene proporciones y evita tarjetas desiguales -->
+              <div class="w-28 h-28 mx-auto mb-4 border-4 border-neo-black rounded-full overflow-hidden bg-white flex items-center justify-center">
+                <img 
+                  src={gestor.logo} 
+                  alt={gestor.nombre}
+                  class="w-full h-full object-contain"
+                  loading="lazy"
+                  width="112"
+                  height="112"
+                />
+              </div>
+
+              <div class="mt-2">
+                <h4 class="font-bold text-sm text-neo-black mb-2 leading-tight">{gestor.nombre}</h4>
+                <p class="text-xs font-semibold text-gray-600 leading-tight">{gestor.apoyo}</p>
+              </div>
             </div>
           ))}
         </div>
+      </div>
       </div>
     </div>
   </section>

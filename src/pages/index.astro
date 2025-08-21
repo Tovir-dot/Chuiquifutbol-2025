@@ -21,13 +21,22 @@ import agradecimientosData from '../data/agradecimientos.json';
   <Navbar />
   
   <!-- Hero Section -->
-  <section id="inicio" class="pt-20 pb-16 bg-gradient-to-br from-neo-yellow via-neo-cyan to-neo-magenta">
+  <section id="inicio" class="pt-24 pb-16 bg-gradient-to-br from-neo-yellow via-neo-cyan to-neo-magenta">
     <div class="container mx-auto px-4 text-center">
       <div class="max-w-6xl mx-auto">
-        <h1 class="text-5xl md:text-7xl lg:text-9xl font-black text-neo-black mb-6 uppercase tracking-tight leading-tight">
-          CHIQUIFÚTBOL
-        </h1>
-        <div class="bg-neo-white border-4 border-neo-black rounded-2xl shadow-neo-xl p-8 mb-8">
+       <header class="mb-6 text-center">
+  <a href="/" class="inline-block" aria-label="Ir al inicio — CHIQUIFÚTBOL">
+    <img 
+      src="/logo-chiquifutbol.webp" 
+      alt="Logo CHIQUIFÚTBOL" 
+      class="w-64 md:w-80 mx-auto mb-4"
+      width="512" 
+      height="200"
+      loading="eager" 
+    />
+  </a>
+
+          <div class="bg-neo-white border-4 border-neo-black rounded-2xl shadow-neo-xl p-8 mb-8">
           <h2 class="text-2xl md:text-4xl lg:text-5xl font-black text-neo-black mb-4 uppercase">
             Sur Occidente de Colombia 2025
           </h2>
@@ -40,6 +49,7 @@ import agradecimientosData from '../data/agradecimientos.json';
               <p class="font-bold text-neo-black">Masculino 2014 - 2015</p>
             </div>
             <div class="bg-neo-magenta bg-opacity-80 border-4 border-neo-black rounded-xl p-4">
+              <img src="/icono-fecha.svg" alt="Fecha" class="w-8 h-8 mx-auto mb-2"/>
               <h3 class="font-black text-neo-black text-lg">LUGAR</h3>
               <p class="font-bold text-neo-black">Puerres, Nariño</p>
             </div>
@@ -61,7 +71,7 @@ import agradecimientosData from '../data/agradecimientos.json';
       </div>
     </div>
   </section>
-
+</header>
   <!-- Equipos Participantes -->
   <section id="equipos" class="py-16 bg-neo-white">
     <div class="container mx-auto px-4">

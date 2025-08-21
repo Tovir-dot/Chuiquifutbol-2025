@@ -3,24 +3,24 @@
     "alcaldesa": {
       "nombre": "Graciela Lucero Hernández",
       "cargo": "Alcaldesa de Puerres",
-      "foto": "https://images.pexels.com/photos/3184305/pexels-photo-3184305.jpeg?auto=compress&cs=tinysrgb&w=300"
+      "foto": "https://scontent-mad1-1.xx.fbcdn.net/v/t39.30808-1/367423001_1016468249480980_2847318223854092018_n.jpg?stp=c0.427.1433.1433a_dst-jpg_s200x200_tt6&_nc_cat=106&ccb=1-7&_nc_sid=1d2534&_nc_ohc=V12ln_fpoJwQ7kNvwHaBd8x&_nc_oc=AdmJii-S34Vf_u8cNmxvCI0HgfzuLZnMYpwmxYwmcS1rxN1ATghfolehXAuvJbjcmBO4XIYOGM7JkWtDDz-vpvQN&_nc_zt=24&_nc_ht=scontent-mad1-1.xx&_nc_gid=HuUYNsBqv5iSm4FfJgiOtA&oh=00_AfXzg4CoptMRleyEr92RWA11Kbk-de5SaqDyq07Fonya-Q&oe=68AC85BF"
     },
     "oficina": {
       "nombre": "Oficina de Cultura y Deporte de Puerres",
-      "logo": "https://images.pexels.com/photos/2479312/pexels-photo-2479312.jpeg?auto=compress&cs=tinysrgb&w=200"
+      "logo": "/alcaldia-puerres.webp"
     },
     "fundacion": {
       "nombre": "Fundación Alianza Sureña",
-      "logo": "https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=200"
+      "logo": "https://scontent-mad2-1.xx.fbcdn.net/v/t39.30808-6/469639440_564276566246599_3129998975036050482_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=i4x43PeetbIQ7kNvwHgrp8S&_nc_oc=AdkMFKz7Nv5tLIu0e3UHPJmViWGUqmyaszTvMIp-DCh_qMkRNbbNfQzOOsYcDgO-6WhRYryR15NtRJFvYJOfJW_K&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=NnzoUWxePlIiMV_tSF7VAw&oh=00_AfXMr4FkVCd6QsqkUljY_YRxtsMaRSzkPuxyj204jpB7uA&oe=68AC50F1"
     },
     "coordinador": {
       "nombre": "Óscar Armando Bolaños Castro",
       "cargo": "Coordinador Zonal CHIQUIFÚTBOL – Sur Occidente de Colombia",
-      "foto": "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300"
+      "foto": "https://scontent-mad2-1.xx.fbcdn.net/v/t1.6435-9/50750900_2341707392772992_2221515836072394752_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=IZu-mHD5MswQ7kNvwHH1x1j&_nc_oc=AdnOCp4D_awNLxqmCOWItFSLLFp8zMl0GaadBtmrFL5LrmZ-_4TlDEDAPIRLoNToZpCqzt6JCJvcvnvKRGTE2gEp&_nc_zt=23&_nc_ht=scontent-mad2-1.xx&_nc_gid=GPLsalJB0Xq7AdmrcITuuQ&oh=00_AfW-JnSPIqUJJAlP3hWQJu9xJ8WTe8c1_4jfrggd6Bqegw&oe=68CE0578"
     },
     "aval": {
       "nombre": "Vigor, la fuerza de los eventos",
-      "logo": "https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=200"
+      "logo": "/vigor-20-anios.webp"
     },
     "contacto": {
       "whatsapp": "3183773718",
@@ -31,27 +31,27 @@
     {
       "nombre": "Municipio de Puerres",
       "apoyo": "Organización y respaldo institucional",
-      "logo": "https://images.pexels.com/photos/2479312/pexels-photo-2479312.jpeg?auto=compress&cs=tinysrgb&w=200"
+      "logo": "/alcaldia-puerres.webp"
     },
     {
       "nombre": "Lácteos Santa María",
       "apoyo": "Hidratación para los equipos",
-      "logo": "https://images.pexels.com/photos/248412/pexels-photo-248412.jpeg?auto=compress&cs=tinysrgb&w=200"
+      "logo": "/lacteos-santamaria.webp"
     },
     {
       "nombre": "Vigor",
-      "apoyo": "Patrocinio y aval de calidad",
-      "logo": "https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=200"
+      "apoyo": "Aval de calidad",
+      "logo": "/logo-vigor.webp"
     },
     {
       "nombre": "OSBOL Sport Marketing",
       "apoyo": "Apoyo en marketing y difusión",
-      "logo": "https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=200"
+      "logo": "/logo-osbol.webp"
     },
     {
       "nombre": "Fortaleza",
       "apoyo": "Gestión y respaldo logístico",
-      "logo": "https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=200"
+      "logo": "/logo-fortaleza.webp"
     }
   ]
 }

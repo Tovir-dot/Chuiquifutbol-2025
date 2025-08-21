@@ -1,50 +1,98 @@
 [
-  { 
-    "id": 1, 
-    "nombre": "Atlético Popayán", 
-    "logo": "https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=200", 
-    "grupo": "A" 
+  {
+    "id": 1,
+    "nombre": "Club RADY Ipiales",
+    "logo": "/escudo-radi.webp",
+    "grupo": "A"
   },
-  { 
-    "id": 2, 
-    "nombre": "Club Deportes Patiá", 
-    "logo": "https://images.pexels.com/photos/1618200/pexels-photo-1618200.jpeg?auto=compress&cs=tinysrgb&w=200", 
-    "grupo": "A" 
+  {
+    "id": 2,
+    "nombre": "Escuela Municipal de Puerres",
+    "logo": "/alcaldia-puerres.webp",
+    "grupo": "A"
   },
-  { 
-    "id": 3, 
-    "nombre": "AFD Sportas", 
-    "logo": "https://images.pexels.com/photos/2479312/pexels-photo-2479312.jpeg?auto=compress&cs=tinysrgb&w=200", 
-    "grupo": "A" 
+  {
+    "id": 3,
+    "nombre": "Atlético Popayán",
+    "logo": "/escudo-popayan.webp",
+    "grupo": "A"
   },
-  { 
-    "id": 4, 
-    "nombre": "Futplay Ipiales", 
-    "logo": "https://images.pexels.com/photos/1459903/pexels-photo-1459903.jpeg?auto=compress&cs=tinysrgb&w=200", 
-    "grupo": "A" 
+  {
+    "id": 4,
+    "nombre": "Sporting de Nariño A",
+    "logo": "/escudo-sporting.webp",
+    "grupo": "A"
   },
-  { 
-    "id": 5, 
-    "nombre": "Deportivo Pasto", 
-    "logo": "https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=200", 
-    "grupo": "B" 
+  {
+    "id": 5,
+    "nombre": "Futplay Ipiales",
+    "logo": "/escudo-futplay.webp",
+    "grupo": "B"
   },
-  { 
-    "id": 6, 
-    "nombre": "Estudiantes F.C.", 
-    "logo": "https://images.pexels.com/photos/2291004/pexels-photo-2291004.jpeg?auto=compress&cs=tinysrgb&w=200", 
-    "grupo": "B" 
+  {
+    "id": 6,
+    "nombre": "Club Deportivo Río Real Pasto",
+    "logo": "/escudo-rioreal.webp",
+    "grupo": "B"
   },
-  { 
-    "id": 7, 
-    "nombre": "CAR Nariño", 
-    "logo": "https://images.pexels.com/photos/3621104/pexels-photo-3621104.jpeg?auto=compress&cs=tinysrgb&w=200", 
-    "grupo": "B" 
+  {
+    "id": 7,
+    "nombre": "AFD Sportas Nariño",
+    "logo": "/escudo-sportas.webp",
+    "grupo": "B"
   },
-  { 
-    "id": 8, 
-    "nombre": "Academia Cali La Unión", 
-    "logo": "https://images.pexels.com/photos/2479312/pexels-photo-2479312.jpeg?auto=compress&cs=tinysrgb&w=200", 
-    "grupo": "B" 
+  {
+    "id": 8,
+    "nombre": "Club Deportes Patiá",
+    "logo": "/escudo-deportes-patia.webp",
+    "grupo": "B"
+  },
+  {
+    "id": 9,
+    "nombre": "Academia Deportivo Cali La Unión",
+    "logo": "/escudo-cali.webp",
+    "grupo": "C"
+  },
+  {
+    "id": 10,
+    "nombre": "Car Nariño Pasto",
+    "logo": "/escudo-car.webp",
+    "grupo": "C"
+  },
+  {
+    "id": 11,
+    "nombre": "Deportivo Pasto",
+    "logo": "/escudo-pasto.webp",
+    "grupo": "C"
+  },
+  {
+    "id": 12,
+    "nombre": "Estudiantes F.C. Pasto",
+    "logo": "/escudo-estudiantes.webp",
+    "grupo": "C"
+  },
+  {
+    "id": 13,
+    "nombre": "Sporting de Nariño B",
+    "logo": "/escudo-sporting.webp",
+    "grupo": "D"
+  },
+  {
+    "id": 14,
+    "nombre": "Jaguares Pasto",
+    "logo": "/escudo-jaguares.webp",
+    "grupo": "D"
+  },
+  {
+    "id": 15,
+    "nombre": "Alianza Sureña Nariño",
+    "logo": "/escudo-alianza.webp",
+    "grupo": "D"
+  },
+  {
+    "id": 16,
+    "nombre": "ALL BOY Pasto",
+    "logo": "/escudo-allboys.webp",
+    "grupo": "D"
   }
 ]

@@ -17,6 +17,20 @@ import goleadoresData from '../data/goleadores.json';
 import agradecimientosData from '../data/agradecimientos.json';
 ---
 
+<style>
+  /* clase para forzar máximo 2 líneas con ellipsis; ajustar line-height si hace falta */
+  .two-line {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.1;
+    max-height: calc(1.1em * 2);
+    white-space: normal;
+  }
+</style>
+
 <Layout title="CHIQUIFÚTBOL Sur Occidente Colombia 2025 - Torneo Oficial">
   <Navbar />
   
@@ -82,8 +96,8 @@ import agradecimientosData from '../data/agradecimientos.json';
       
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {equiposData.map((equipo) => (
-          <div class="bg-neo-white border-4 border-neo-black rounded-2xl shadow-neo-lg hover:shadow-neo-xl transition-all duration-300 transform hover:-translate-y-2 p-6 text-center group">
-            <div class="w-20 h-20 mx-auto mb-4 border-4 border-neo-black rounded-full overflow-hidden group-hover:border-neo-cyan transition-colors duration-300">
+          <div class="bg-neo-white border-4 border-neo-black rounded-2xl shadow-neo-lg hover:shadow-neo-xl transition-all duration-300 transform hover:-translate-y-2 p-6 text-center group flex flex-col justify-between h-full">
+            <div class="w-20 h-20 mx-auto mb-4 border-4 border-neo-black rounded-full overflow-hidden group-hover:border-neo-cyan transition-colors duration-300 flex items-center justify-center">
               <img 
                 src={equipo.logo} 
                 alt={`Logo ${equipo.nombre}`} 
@@ -91,92 +105,156 @@ import agradecimientosData from '../data/agradecimientos.json';
                 loading="lazy"
               />
             </div>
-            <h3 class="font-bold text-lg text-neo-black leading-tight mb-2">{equipo.nombre}</h3>
-            <div class="bg-neo-yellow border-2 border-neo-black rounded-lg px-3 py-1 inline-block">
-              <span class="font-black text-sm text-neo-black">GRUPO {equipo.grupo}</span>
+            <h3
+              class="font-bold text-lg text-neo-black leading-tight mb-2 two-line"
+              title={equipo.nombre}
+            >
+              {equipo.nombre}
+            </h3>
+            <div class="mt-4">
+              <div class="bg-neo-yellow border-2 border-neo-black rounded-lg px-3 py-1 inline-block">
+                <span class="font-black text-sm text-neo-black">GRUPO {equipo.grupo}</span>
+              </div>
             </div>
           </div>
         ))}
       </div>
-    </div>
-  </section>
 
   <!-- Resultados Finales -->
-  <section id="resultados" class="py-16 bg-gradient-to-r from-neo-lime via-neo-cyan to-neo-yellow">
-    <div class="container mx-auto px-4">
-      <SectionTitle 
-        title="Resultados Finales" 
-        subtitle="Los campeones del CHIQUIFÚTBOL 2025" 
-      />
-      
-      <!-- Podium -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-        <!-- Campeón -->
-        <div class="md:col-span-4 lg:col-span-2 bg-neo-yellow border-4 border-neo-black rounded-2xl shadow-neo-xl p-8 text-center relative overflow-hidden">
-          <div class="absolute top-4 left-4 bg-neo-black text-neo-yellow rounded-full w-12 h-12 flex items-center justify-center">
-            <span class="text-2xl font-black">🏆</span>
-          </div>
-          <img 
-            src={resultadosFinalesData.logocampeon} 
-            alt={resultadosFinalesData.campeon} 
-            class="w-24 h-24 mx-auto mb-4 border-4 border-neo-black rounded-full object-cover"
-            loading="lazy"
-          />
-          <h3 class="text-3xl font-black text-neo-black mb-2 uppercase">CAMPEÓN</h3>
-          <h4 class="text-xl font-bold text-neo-black">{resultadosFinalesData.campeon}</h4>
+<section id="resultados" class="py-32 mt-20 bg-gradient-to-r from-neo-lime via-neo-cyan to-neo-yellow">
+  <div class="container mx-auto px-4">
+    <SectionTitle 
+      title="Resultados Finales" 
+      subtitle="Los campeones del CHIQUIFÚTBOL 2025" 
+    />
+
+    <!-- Podium (igual que antes, con espacio para más info si existe en JSON) -->
+    <div class="grid grid-cols-1 md:grid-cols-6 gap-6 mb-12 items-start">
+      <!-- Campeón -->
+      <div class="md:col-span-3 lg:col-span-3 bg-neo-yellow border-4 border-neo-black rounded-2xl shadow-neo-xl p-8 text-center relative overflow-hidden flex flex-col items-center">
+        <div class="absolute top-4 left-4 bg-neo-black text-neo-yellow rounded-full w-12 h-12 flex items-center justify-center">
+          <span class="text-2xl font-black">🏆</span>
         </div>
-        
-        <!-- Subcampeón -->
-        <div class="bg-neo-cyan border-4 border-neo-black rounded-2xl shadow-neo-lg p-6 text-center">
-          <div class="absolute top-4 left-4 bg-neo-black text-neo-cyan rounded-full w-10 h-10 flex items-center justify-center">
-            <span class="text-lg font-black">🥈</span>
-          </div>
-          <img 
-            src={resultadosFinalesData.logosubcampeon} 
-            alt={resultadosFinalesData.subcampeon} 
-            class="w-16 h-16 mx-auto mb-3 border-4 border-neo-black rounded-full object-cover"
-            loading="lazy"
-          />
-          <h3 class="text-lg font-black text-neo-black mb-1">SUBCAMPEÓN</h3>
-          <h4 class="text-sm font-bold text-neo-black">{resultadosFinalesData.subcampeon}</h4>
-        </div>
-        
-        <!-- Tercer Lugar -->
-        <div class="bg-neo-magenta border-4 border-neo-black rounded-2xl shadow-neo-lg p-6 text-center">
-          <div class="absolute top-4 left-4 bg-neo-black text-neo-magenta rounded-full w-10 h-10 flex items-center justify-center">
-            <span class="text-lg font-black">🥉</span>
-          </div>
-          <img 
-            src={resultadosFinalesData.logotercero} 
-            alt={resultadosFinalesData.tercero} 
-            class="w-16 h-16 mx-auto mb-3 border-4 border-neo-black rounded-full object-cover"
-            loading="lazy"
-          />
-          <h3 class="text-lg font-black text-neo-black mb-1">TERCER LUGAR</h3>
-          <h4 class="text-sm font-bold text-neo-black">{resultadosFinalesData.tercero}</h4>
-        </div>
+
+        <img 
+          src={resultadosFinalesData.logocampeon} 
+          alt={resultadosFinalesData.campeon} 
+          class="w-28 h-28 mx-auto mb-4 border-4 border-neo-black rounded-full object-cover"
+          width="112" height="112" loading="lazy"
+        />
+        <h3 class="text-3xl font-black text-neo-black mb-2 uppercase">CAMPEÓN</h3>
+        <h4 class="text-xl font-bold text-neo-black mb-4">{resultadosFinalesData.campeon}</h4>
+
+        {resultadosFinalesData.campeon_descripcion && (
+          <p class="text-sm text-gray-700 max-w-prose text-center">{resultadosFinalesData.campeon_descripcion}</p>
+        )}
       </div>
-      
-      <!-- Premios Individuales -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Valla Menos Vencida -->
-        <div class="bg-neo-white border-4 border-neo-black rounded-2xl shadow-neo-lg p-6 text-center">
-          <h3 class="text-2xl font-black text-neo-black mb-4 uppercase">🥅 Valla Menos Vencida</h3>
-          <p class="text-lg font-bold text-neo-black">{resultadosFinalesData.valla_menos_vencida.jugador}</p>
-          <p class="text-md font-semibold text-gray-700">{resultadosFinalesData.valla_menos_vencida.equipo}</p>
-          <p class="text-xl font-black text-neo-cyan">{resultadosFinalesData.valla_menos_vencida.goles_en_contra} goles en contra</p>
+
+      <!-- Subcampeón -->
+      <div class="relative bg-neo-cyan border-4 border-neo-black rounded-2xl shadow-neo-lg p-6 text-center flex flex-col items-center">
+        <div class="absolute top-4 left-4 bg-neo-black text-neo-cyan rounded-full w-10 h-10 flex items-center justify-center">
+          <span class="text-lg font-black">🥈</span>
         </div>
-        
-        <!-- Máximo Goleador -->
-        <div class="bg-neo-white border-4 border-neo-black rounded-2xl shadow-neo-lg p-6 text-center">
-          <h3 class="text-2xl font-black text-neo-black mb-4 uppercase">⚽ Máximo Goleador</h3>
-          <p class="text-lg font-bold text-neo-black">{resultadosFinalesData.goleadores[0].jugador}</p>
-          <p class="text-md font-semibold text-gray-700">{resultadosFinalesData.goleadores[0].equipo}</p>
-          <p class="text-xl font-black text-neo-magenta">{resultadosFinalesData.goleadores[0].goles} goles</p>
+        <img 
+          src={resultadosFinalesData.logosubcampeon} 
+          alt={resultadosFinalesData.subcampeon} 
+          class="w-20 h-20 mx-auto mb-3 border-4 border-neo-black rounded-full object-cover"
+          width="80" height="80" loading="lazy"
+        />
+        <h3 class="text-lg font-black text-neo-black mb-1">SUBCAMPEÓN</h3>
+        <h4 class="text-sm font-bold text-neo-black">{resultadosFinalesData.subcampeon}</h4>
+      </div>
+
+      <!-- Tercer Lugar -->
+      <div class="relative bg-neo-magenta border-4 border-neo-black rounded-2xl shadow-neo-lg p-6 text-center flex flex-col items-center">
+        <div class="absolute top-4 left-4 bg-neo-black text-neo-magenta rounded-full w-10 h-10 flex items-center justify-center">
+          <span class="text-lg font-black">🥉</span>
         </div>
+        <img 
+          src={resultadosFinalesData.logotercero} 
+          alt={resultadosFinalesData.tercero} 
+          class="w-20 h-20 mx-auto mb-3 border-4 border-neo-black rounded-full object-cover"
+          width="80" height="80" loading="lazy"
+        />
+        <h3 class="text-lg font-black text-neo-black mb-1">TERCER LUGAR</h3>
+        <h4 class="text-sm font-bold text-neo-black">{resultadosFinalesData.tercero}</h4>
+      </div>
+
+      <!-- Cuarto Lugar (opcional, muestra solo si existe en JSON) -->
+      {resultadosFinalesData.cuarto && (
+        <div class="relative bg-neo-white border-4 border-neo-black rounded-2xl shadow-neo-lg p-6 text-center flex flex-col items-center">
+          <div class="absolute top-4 left-4 bg-neo-black text-neo-white rounded-full w-10 h-10 flex items-center justify-center">
+            <span class="text-lg font-black">🏅</span>
+          </div>
+          <img 
+            src={resultadosFinalesData.logocuarto ?? resultadosFinalesData.cuarto_logo ?? '/placeholder-cuarto.webp'} 
+            alt={resultadosFinalesData.cuarto ?? 'Cuarto Lugar'} 
+            class="w-20 h-20 mx-auto mb-3 border-4 border-neo-black rounded-full object-cover"
+            width="80" height="80" loading="lazy"
+          />
+          <h3 class="text-lg font-black text-neo-black mb-1">CUARTO LUGAR</h3>
+          <h4 class="text-sm font-bold text-neo-black">{resultadosFinalesData.cuarto}</h4>
+        </div>
+      )}
+    </div>
+
+    <!-- Premios individuales ampliados: valla + goleadores destacados + lista -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+      <!-- Valla Menos Vencida (foto de premiación) -->
+      <div class="bg-neo-white border-4 border-neo-black rounded-2xl shadow-neo-lg p-6 text-center flex flex-col">
+        <h3 class="text-2xl font-black text-neo-black mb-4 uppercase">🥅 Valla Menos Vencida</h3>
+
+        <div class="mb-4 flex items-center justify-center">
+          <img
+            src={resultadosFinalesData.valla_menos_vencida?.foto ?? '/placeholder-valla.webp'}
+            alt={resultadosFinalesData.valla_menos_vencida?.jugador ?? 'Valla Menos Vencida'}
+            class="w-96 h-auto object-cover border-4 border-neo-black rounded-lg"
+            loading="lazy"
+            width="320" height="224"
+          />
+        </div>
+
+        <p class="text-lg font-bold text-neo-black">{resultadosFinalesData.valla_menos_vencida.jugador}</p>
+        <p class="text-md font-semibold text-gray-700">{resultadosFinalesData.valla_menos_vencida.equipo}</p>
+        <p class="text-xl font-black text-neo-cyan mt-2">{resultadosFinalesData.valla_menos_vencida.goles_en_contra} goles en contra</p>
+
+        {/* opcional: pie de foto / nota */}
+        {resultadosFinalesData.valla_menos_vencida?.nota && (
+          <p class="text-xs text-gray-600 mt-3">{resultadosFinalesData.valla_menos_vencida.nota}</p>
+        )}
+      </div>
+
+      <!-- Goleadores destacados: mostrar 2 con foto -->
+      <div class="col-span-1 md:col-span-2 bg-neo-white border-4 border-neo-black rounded-2xl shadow-neo-lg p-6">
+        <h3 class="text-2xl font-black text-neo-black mb-4 uppercase">⚽ Goleadores del Torneo</h3>
+                <div class="mb-4 flex items-center justify-center">
+          <img
+            src='/goleadores.webp'
+            alt='goleadores destacados'
+            class="w-96 h-auto object-cover border-4 border-neo-black rounded-lg"
+            loading="lazy"
+            width="320" height="224"
+          />
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          {resultadosFinalesData.goleadores.slice(0,2).map((goleador) => (
+            <div class="flex items-center gap-4 bg-gray-50 border-2 border-neo-black rounded-xl p-3">
+
+              <div class="flex-1 text-left">
+                <p class="font-bold text-lg text-neo-black">{goleador.jugador}</p>
+                <p class="text-sm font-semibold text-gray-700">{goleador.equipo}</p>
+                <p class="text-xl font-black text-neo-magenta">{goleador.goles} goles</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Grupos -->
   <section id="grupos" class="py-16 bg-neo-white">
@@ -439,3 +517,4 @@ import agradecimientosData from '../data/agradecimientos.json';
 
   <Footer />
 </Layout>
+

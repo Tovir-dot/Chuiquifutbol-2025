@@ -1,27 +1,28 @@
 {
   "campeon": "Club Deportes Patiá",
-  "logocampeon": "https://images.pexels.com/photos/1618200/pexels-photo-1618200.jpeg?auto=compress&cs=tinysrgb&w=200",
-  "subcampeon": "Atlético Popayán",
-  "logosubcampeon": "https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=200",
+  "logocampeon": "/escudo-deportes-patia.webp",
+  "subcampeon": "Club Deportivo Río Real Pasto",
+  "logosubcampeon": "/escudo-rioreal.webp",
   "tercero": "Deportivo Pasto",
-  "logotercero": "https://images.pexels.com/photos/1884574/pexels-photo-1884574.jpeg?auto=compress&cs=tinysrgb&w=200",
-  "cuarto": "Club Río Real",
-  "logocuarto": "https://images.pexels.com/photos/2479312/pexels-photo-2479312.jpeg?auto=compress&cs=tinysrgb&w=200",
+  "logotercero": "/escudo-pasto.webp",
+  "cuarto": "Sporting de Nariño A",
+  "logocuarto": "/escudo-sporting.webp",
   "valla_menos_vencida": {
-    "jugador": "Juan Pérez",
+    "jugador": "Jhosep Rodríguez ",
     "equipo": "Club Deportes Patiá",
-    "goles_en_contra": 3
+    "goles_en_contra": 3,
+    "foto": "/valla.webp"
   },
   "goleadores": [
     {
-      "jugador": "Juan Pérez",
+      "jugador": "YHERKO RAMIREZ",
       "equipo": "Club Deportes Patiá",
-      "goles": 8
+      "goles": 6
     },
     {
-      "jugador": "Carlos Gómez",
-      "equipo": "Atlético Popayán",
-      "goles": 8
+      "jugador": "JUAN BAUTISTA",
+      "equipo": "Club Deportes Patiá",
+      "goles": 6
     }
   ]
 }

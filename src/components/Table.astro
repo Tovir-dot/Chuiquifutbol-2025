@@ -6,6 +6,10 @@ export interface Props {
 }
 
 const { headers, data, type } = Astro.props;
+
+// Para goleadores, separamos los primeros 7 y el resto
+const initialData = type === 'goleadores' ? data.slice(0, 7) : data;
+const remainingData = type === 'goleadores' ? data.slice(7) : [];
 ---
 
 <div class="overflow-x-auto bg-neo-white border-4 border-neo-black rounded-2xl shadow-neo-xl">
@@ -19,8 +23,8 @@ const { headers, data, type } = Astro.props;
         ))}
       </tr>
     </thead>
-    <tbody>
-      {data.map((row, index) => (
+    <tbody id="goleadores-body">
+      {initialData.map((row, index) => (
         <tr class={`border-b-2 border-gray-200 hover:bg-neo-lime hover:bg-opacity-20 transition-colors duration-200 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-neo-white'}`}>
           {type === 'posiciones' && (
             <>
@@ -38,7 +42,6 @@ const { headers, data, type } = Astro.props;
               <td class="px-4 py-4 text-center font-semibold border-r-2 border-gray-200">{row.gf}</td>
               <td class="px-4 py-4 text-center font-semibold border-r-2 border-gray-200">{row.gc}</td>
               <td class="px-4 py-4 text-center font-semibold border-r-2 border-gray-200">{row.dg > 0 ? `+${row.dg}` : row.dg}</td>
-              
               <td class="px-4 py-4 text-center font-bold text-lg text-neo-black bg-neo-cyan bg-opacity-30">{row.pts}</td>
             </>
           )}
@@ -52,6 +55,67 @@ const { headers, data, type } = Astro.props;
           )}
         </tr>
       ))}
+      
+      {/* Filas adicionales (ocultas inicialmente) */}
+      {type === 'goleadores' && remainingData.map((row, index) => (
+        <tr class="hidden beyond-initial border-b-2 border-gray-200 hover:bg-neo-lime hover:bg-opacity-20 transition-colors duration-200 bg-neo-white">
+          <td class="px-4 py-4 font-bold text-neo-black border-r-2 border-gray-200">{initialData.length + index + 1}</td>
+          <td class="px-4 py-4 font-semibold text-neo-black border-r-2 border-gray-200">{row.jugador}</td>
+          <td class="px-4 py-4 font-semibold text-neo-black border-r-2 border-gray-200">{row.equipo}</td>
+          <td class="px-4 py-4 text-center font-bold text-lg text-neo-black bg-neo-magenta bg-opacity-30">{row.goles}</td>
+        </tr>
+      ))}
     </tbody>
   </table>
+  
+  {/* Botón para mostrar más/menos (solo para goleadores) */}
+  {type === 'goleadores' && remainingData.length > 0 && (
+    <div class="text-center mt-4 pb-4">
+      <button
+        id="toggle-goleadores"
+        class="bg-neo-blue text-black font-bold py-2 px-4 rounded-2xl border-2 border-neo-black shadow-neo-sm hover:shadow-neo-md active:shadow-neo-sm transition-all duration-200
+        hover:bg-neo-yellow hover:border-neo-magenta hover:text-neo-magenta hover:-translate-y-1 hover:scale-105"
+      >
+        Ver todos
+      </button>
+    </div>
+  )}
 </div>
+
+<script>
+// Solo ejecutar para tablas de goleadores
+const toggleButton = document.getElementById('toggle-goleadores');
+if (toggleButton) {
+  const beyondRows = document.querySelectorAll('.beyond-initial');
+  let showingAll = false;
+  
+  toggleButton.addEventListener('click', () => {
+    showingAll = !showingAll;
+    
+    if (showingAll) {
+      // Mostrar todas las filas
+      beyondRows.forEach(row => {
+        row.classList.remove('hidden');
+        // Alternar colores de fondo para las filas pares/impares
+        let rowIndex = -1;
+        if (row.parentNode) {
+          rowIndex = Array.from(row.parentNode.children).indexOf(row);
+        }
+        row.classList.toggle('bg-gray-50', rowIndex % 2 === 0);
+        row.classList.toggle('bg-neo-white', rowIndex % 2 !== 0);
+      });
+      toggleButton.textContent = 'Ver menos';
+    } else {
+      // Ocultar filas beyond-initial
+      beyondRows.forEach(row => row.classList.add('hidden'));
+      toggleButton.textContent = 'Ver todos';
+    }
+  });
+}
+</script>
+
+<style>
+.hidden {
+  display: none;
+}
+</style>

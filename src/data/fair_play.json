@@ -1,53 +1,91 @@
 [
   {
-    "equipo": "Club Deportes Patiá",
+    "equipo": "Club Deportivo Río Real Pasto",
     "jugadores": [
-      {
-        "nombre": "JUAN PÉREZ LÓPEZ",
-        "ta": 0,
-        "tr": 0,
-        "jl": 0
-      },
-      {
-        "nombre": "CARLOS GÓMEZ RUIZ",
-        "ta": 0,
-        "tr": 0,
-        "jl": 0
-      }
+      { "nombre": "JUAN DIAZ", "ta": 1, "tr": 0, "jl": -5 },
+      { "nombre": "FELIPE BENAVIDEZ", "ta": 1, "tr": 0, "jl": -5 },
+      { "nombre": "JHONIER ANGULO", "ta": 1, "tr": 0, "jl": -5 }
     ]
   },
   {
-    "equipo": "Atlético Popayán",
+    "equipo": "A Sporting de Nariño",
     "jugadores": [
-      {
-        "nombre": "ANDRÉS MARTÍNEZ",
-        "ta": 1,
-        "tr": 0,
-        "jl": -1
-      },
-      {
-        "nombre": "LUIS FERNÁNDEZ",
-        "ta": 1,
-        "tr": 0,
-        "jl": -1
-      }
+      { "nombre": "SAMUEL FELIPE AYALA YELA", "ta": 1, "tr": 0, "jl": -5 },
+      { "nombre": "JHOSEP MAYORGA", "ta": 1, "tr": 0, "jl": -5 },
+      { "nombre": "JUAN GOMEZ CEBALLOS", "ta": 1, "tr": 0, "jl": -5 }
+    ]
+  },
+  {
+    "equipo": "Club RADY Ipiales",
+    "jugadores": [
+      { "nombre": "MATIAS SARASTI", "ta": 1, "tr": 0, "jl": -5 },
+      { "nombre": "JUAN CADENA", "ta": 1, "tr": 0, "jl": -5 },
+      { "nombre": "IKER HERNANDEZ", "ta": 1, "tr": 0, "jl": -5 }
     ]
   },
   {
     "equipo": "Deportivo Pasto",
     "jugadores": [
-      {
-        "nombre": "MIGUEL TORRES",
-        "ta": 2,
-        "tr": 1,
-        "jl": -5
-      },
-      {
-        "nombre": "DAVID SÁNCHEZ",
-        "ta": 1,
-        "tr": 0,
-        "jl": -1
-      }
+      { "nombre": "ISAAC PATIÑO", "ta": 1, "tr": 0, "jl": -5 },
+      { "nombre": "THIAGO LOPEZ", "ta": 1, "tr": 0, "jl": -5 },
+      { "nombre": "JUAN A NARVAEZ", "ta": 1, "tr": 0, "jl": -5 }
+    ]
+  },
+  {
+    "equipo": "Academia Deportivo Cali La Unión",
+    "jugadores": [
+      { "nombre": "DANIEL S. BASTIDAS", "ta": 1, "tr": 0, "jl": -5 },
+      { "nombre": "MIGUEL A. CABRERA", "ta": 1, "tr": 0, "jl": -5 },
+      { "nombre": "HUGO S. BURBANO", "ta": 1, "tr": 0, "jl": -5 }
+    ]
+  },
+  {
+    "equipo": "Club Deportes Patiá",
+    "jugadores": [
+      { "nombre": "ALAN ORTEGA", "ta": 1, "tr": 0, "jl": -5 }
+    ]
+  },
+  {
+    "equipo": "Atlético Popayán",
+    "jugadores": [
+      { "nombre": "JUAN VIDAL", "ta": 1, "tr": 0, "jl": -5 }
+    ]
+  },
+  {
+    "equipo": "Jaguares de Pasto",
+    "jugadores": [
+      { "nombre": "VICTOR QUIÑONES", "ta": 1, "tr": 0, "jl": -5 }
+    ]
+  },
+  {
+    "equipo": "Alianza Sureña Nariño",
+    "jugadores": [
+      { "nombre": "MARTIN SANCHEZ", "ta": 1, "tr": 0, "jl": -5 }
+    ]
+  },
+  {
+    "equipo": "CAR Nariño Pasto",
+    "jugadores": [
+      { "nombre": "JHORMAN RIVERA", "ta": 1, "tr": 0, "jl": -5 }
+    ]
+  },
+  {
+    "equipo": "Estudiantes F.C. Pasto",
+    "jugadores": [
+      { "nombre": "MIGUEL ALEJANDRO LOPEZ", "ta": 1, "tr": 0, "jl": -5 }
+    ]
+  },
+  {
+    "equipo": "ALLBOYS de Pasto",
+    "jugadores": [
+      { "nombre": "MANUEL FONSECA", "ta": 1, "tr": 0, "jl": -5 }
+    ]
+  },
+  {
+    "equipo": "AFD Sportas de Nariño",
+    "jugadores": [
+      { "nombre": "SAMUEL HIDALGO", "ta": 1, "tr": 0, "jl": -5 },
+      { "nombre": "NICOLAS POTOSI", "ta": 1, "tr": 0, "jl": -5 }
     ]
   }
 ]
